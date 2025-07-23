@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f4f9; /* pastel rosado-lila */
+  color: #333;
+}
+
+body {
+  @apply m-0 flex items-center justify-center min-h-screen;
+}
+
+/* Título principal */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #b383d9; /* Lila pastel */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs (select y text) */
+select,
+input[type="text"] {
+  @apply w-full max-w-md px-4 py-2 rounded-md shadow-sm border-2 border-[#e0d4f5] bg-[#f2ecfa] text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#c9a7f0];
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones */
+button {
+  @apply rounded-md font-semibold px-6 py-2 transition duration-200;
+}
+
+button.bg-green {
+  background-color: #78d6a3;
+  color: white;
+}
+button.bg-green:hover {
+  background-color: #67c495;
+}
+
+button.bg-purple {
+  background-color: #b36df0;
+  color: white;
+}
+button.bg-purple:hover {
+  background-color: #a358e1;
+}
+
+/* Gráfico */
+.chart-container canvas {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para barras del gráfico en color lila */
+.chart-bar {
+  background-color: #c08ff0 !important;
+}
